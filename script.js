@@ -58,13 +58,13 @@ let questions = [
 
     {
         numb: 6,
-        question: "Your Question is Here",
-
+        question: "What does JS stands for",
+        answer: "Java Script",
         options: [
-            "Option 1",
-            "option 2",
-            "option 3",
-            "option 4"
+            "Just Script",
+            "Java Simple",
+            "Java Script",
+            "JVM Script"
         ]
     },
 ];
