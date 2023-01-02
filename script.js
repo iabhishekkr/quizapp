@@ -209,11 +209,9 @@ function timer() {
 
 let timeId = setInterval(() => {
     if (time.innerText > 0) {
-        // console.log('HEllo');
         time.innerText = time.innerText - 1;
     }
     if (time.innerText <= 0) {
-        clearInterval(timeId);
         questionActive = false;
     }
 }, 1000);
