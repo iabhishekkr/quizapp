@@ -78,6 +78,7 @@ let quitBtn = document.querySelector(".quit");
 let question = document.querySelector(".question");
 let option = document.querySelectorAll(".option")
 let result = document.querySelector(".result");
+let message = document.querySelector(".message");
 let ans;
 let questionActive = true;
 let gameActive = false;
@@ -139,6 +140,14 @@ nextBtn.addEventListener('click', () => {
         quizContainer.style.display = "none";
         console.log(correctAns);
         result.innerText = correctAns;
+        if (correctAns >= 5) {
+            message.innerText = "and congrats! 🎉"
+        } else if (correctAns >= 2) {
+            message.innerText = "Well Played"
+        }
+        else if (correctAns <= 1) {
+            message.innerText = "Uh-Oh"
+        }
         gameEnd.style.display = "flex";
 
     }
