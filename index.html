@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="start-page">
+            <button id="start" class="start">Start Quiz</button>
+        </div>
+
+        <div class="rule-container">
+            <div class="rule-title">
+                <h2>Some Rules of this Quiz</h2>
+                <hr class="solid">
+            </div>
+
+            <div class="rules">
+                <div>1. You will have only 15 seconds per each question.</div>
+                <div>2. Once you select your answer, it can't be undone.</div>
+                <div>3. You can't select any option once time goes off.</div>
+                <div>4. You can't exit from the Quiz while you're playing.</div>
+                <div>5. You'll get points on the basis of your correct answers.</div>
+                <hr class="solid">
+            </div>
+            <div class="rule-button">
+                <button class="exit rule-btn">Exit Quiz</button>
+                <button class="continue rule-btn">Continue</button>
+            </div>
+        </div>
+        <div class="quiz-container">
+            <div class="heading">
+                <div class="quiz-title">
+                    <h3>My Awesome Quiz</h3>
+                </div>
+                <div class="timer">
+                    <div class="timer-text">Time Left</div>
+                    <div class="time">15</div>
+                </div>
+            </div>
+            <div class="quiz">
+                <progress id="file" value="15" max="15"></progress>
+                <hr class="solid">
+                <h2 class="question">Question</h2>
+                <div class="option 1">op1</div>
+                <div class="option 2">op2</div>
+                <div class="option 3">op3</div>
+                <div class="option 4">op4</div>
+                <hr class="solid">
+            </div>
+            <div class="quiz-btns">
+                <div class="quiz-status">
+                    <span class="currentNo">1</span> of <span class="totalQuestion">6</span> Questions
+                </div>
+                <button class="next">Next</button>
+            </div>
+        </div>
+        <div class="gameEnd-screen">
+            <div class="info">
+                <div class="endtext">You've completed the Quiz!</div>
+                <div>and congrats! 🎉, You got <span class="result">0</span> out of 6</div>
+            </div>
+
+            <div class="endscreen-btn">
+                <button class="replay endbtn">Replay Quiz</button>
+                <button class="quit endbtn">Quit Quiz</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
