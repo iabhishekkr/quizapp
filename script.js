@@ -153,7 +153,7 @@ nextBtn.addEventListener('click', () => {
     }
 })
 
-
+let isClicked = false;
 
 let play = () => {
     display();
@@ -163,19 +163,24 @@ let play = () => {
 
 Array.from(option).forEach((e, i) => {
     e.addEventListener('click', (e) => {
-        if (questionActive == false)
-            return;
-        if (e.target.innerText == ans) {
-            //correct ans
-            e.target.style.backgroundColor = "green";
-            correctAns++;
+        if (isClicked) {
+            if (questionActive == false)
+                return;
+            if (e.target.innerText == ans) {
+                //correct ans
+                e.target.style.backgroundColor = "green";
+                correctAns++;
+            }
+            else {
+                //wrong ans
+                e.target.style.backgroundColor = "red";
+            }
+            nextBtn.style.display = "block";
         }
-        else {
-            //wrong ans
-            e.target.style.backgroundColor = "red";
-        }
-        nextBtn.style.display = "block";
+        isClicked = false;
     })
+
+
 })
 
 function display() {
@@ -188,6 +193,7 @@ function display() {
         if (questArr.answer)
             ans = questArr.answer;
     })
+    isClicked = true;
 }
 
 function timer() {
